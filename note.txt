@@ -1,0 +1,31 @@
+users
+=====
+id name email role password 
+
+category
+========
+id name slug
+
+headers
+=======
+id name slug user_id article_id file (img, vid)
+
+article
+=======
+id name slug user_id header_id description
+
+article_category
+================
+id article_id category_id 
+
+article_view
+============
+id article_id user_id
+
+article_fav
+===========
+id article_id user_id
+
+
+
+
