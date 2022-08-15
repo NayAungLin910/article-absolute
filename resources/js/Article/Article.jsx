@@ -270,7 +270,7 @@ const Article = () => {
                                                                         key={
                                                                             c.id
                                                                         }
-                                                                        href={`/article-view-by-category/${c.slug}`}
+                                                                        href={api_url + `/article-view-by-category/${c.slug}`}
                                                                     >
                                                                         <span
                                                                             className="badge badge-info"
@@ -294,7 +294,7 @@ const Article = () => {
                                                                     marginRight:
                                                                         "5px",
                                                                 }}
-                                                                href={`/article-view/${article.slug}`}
+                                                                href={api_url + `/article-view/${article.slug}`}
                                                             >
                                                                 <i className="fa-solid fa-eye"></i>
                                                             </a>
