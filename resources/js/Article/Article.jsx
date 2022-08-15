@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { cusaxios } from "../config";
+import { cusaxios, api_url } from "../config";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../Component/Spinner";
 // react select
@@ -232,7 +232,7 @@ const Article = () => {
                                                                 "image" && (
                                                                 <img
                                                                     src={
-                                                                        "/public/" +
+                                                                        api_url +
                                                                         article
                                                                             .header
                                                                             .file_path
@@ -250,7 +250,7 @@ const Article = () => {
                                                                     <iframe
                                                                         className="embed-responsive-item"
                                                                         src={
-                                                                            "/public/" +
+                                                                            api_url +
                                                                             article
                                                                                 .header
                                                                                 .file_path

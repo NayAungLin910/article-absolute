@@ -12,7 +12,7 @@
                     <center>
                         <a href="{{ url('/article-view/' . $featured_article->slug) }}">
                             @if ($featured_article->header->file == 'image')
-                                <img src="{{ $featured_article->header->file_path }}"
+                                <img src="{{ url($featured_article->header->file_path) }}"
                                     alt="{{ $featured_article->header->name }}" width="400" class="img-fluid"
                                     style="max-width: 100%" />
                             @endif
@@ -40,7 +40,7 @@
                     <a href="{{ url('/article-view/' . $l->article->slug) }}">
                         <div class="card" style="width: 21rem;">
                             @if ($l->file == 'image')
-                                <img src="{{ $l->file_path }}" class="card-img-top" alt="Sunset Over the Sea" />
+                                <img src="{{ url($l->file_path) }}" class="card-img-top" alt="{{ $l->name }}" />
                             @endif
                             @if ($l->file == 'video')
                                 <div class="ratio ratio-16x9">
@@ -69,7 +69,7 @@
                             <a href="{{ url('/article-view/' . $a->slug) }}">
                                 <div class="card" style="width: 21rem;">
                                     @if ($a->header->file == 'image')
-                                        <img src="{{ $a->header->file_path }}" class="card-img-top"
+                                        <img src="{{ url($a->header->file_path) }}" class="card-img-top"
                                             alt="{{ $a->header->name }}" />
                                     @endif
                                     @if ($a->header->file == 'video')
@@ -112,7 +112,7 @@
                             <a href="{{ url('/article-view/' . $a->slug) }}">
                                 <div class="card" style="width: 21rem;">
                                     @if ($a->header->file == 'image')
-                                        <img src="{{ $a->header->file_path }}" class="card-img-top"
+                                        <img src="{{ url($a->header->file_path) }}" class="card-img-top"
                                             alt="{{ $a->header->name }}" />
                                     @endif
                                     @if ($a->header->file == 'video')
@@ -155,7 +155,7 @@
                             <a href="{{ url('/article-view/' . $a->slug) }}">
                                 <div class="card" style="width: 21rem;">
                                     @if ($a->header->file == 'image')
-                                        <img src="{{ $a->header->file_path }}" class="card-img-top"
+                                        <img src="{{ url($a->header->file_path) }}" class="card-img-top"
                                             alt="{{ $a->header->name }}" />
                                     @endif
                                     @if ($a->header->file == 'video')

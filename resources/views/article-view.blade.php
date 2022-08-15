@@ -24,7 +24,7 @@
             <h3>{{ $article->header->name }}</h3>
             <br />
             @if ($article->header->file === 'image')
-                <img width="500" style="max-width: 100%" class="img-fluid" src="{{ $article->header->file_path }}"
+                <img width="500" style="max-width: 100%" class="img-fluid" src="{{ url($article->header->file_path) }}"
                     alt="{{ $article->header->name }}" />
             @elseif ($article->header->file === 'video')
                 <div class="row">
@@ -59,7 +59,8 @@
                             window.article_slug = "{{ $article->slug }}"
                             window.auth = @json(auth()->user());
                         </script>
-                        <script src="{{ mix('/js/articleLike.js') }}"></script>
+                        <script src="{{ env("APP_URL") . '/js/articleLike.js' }}"></script>
+                        {{-- <script src="{{ mix('/js/articleLike.js') }}"></script> --}}
                     @endauth
                 </div>
             </div>
@@ -85,7 +86,7 @@
                                 <td>
                                     <a href="{{ url('/article-view/' . $la->slug) }}">
                                         @if ($la->header->file == 'image')
-                                            <img src="{{ $la->header->file_path }}" class="img-fluid"
+                                            <img src="{{ url($la->header->file_path) }}" class="img-fluid"
                                                 style="max-width: 100%" alt="{{ $la->header->name }}" />
                                         @endif
                                         @if ($la->header->file == 'video')

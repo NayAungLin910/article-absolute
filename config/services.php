@@ -33,6 +33,7 @@ return [
     'google' => [
         'client_id' => '52413172178-gvk25dc04oula394hdv4holv1io125fe.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://127.0.0.1:8000/login/google/callback',
+        'redirect' => 'http://www.coffeesojava.xyz/absolute/public/login/google/callback',
+        // 'redirect' => 'http://127.0.0.1:8000/login/google/callback',
     ],
 ];

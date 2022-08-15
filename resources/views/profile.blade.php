@@ -84,7 +84,7 @@
                                 <td>
                                     <a href="{{ url('/article-view/' . $f->slug) }}">
                                         @if ($f->header->file == 'image')
-                                            <img src="{{ $f->header->file_path }}" class="img-fluid"
+                                            <img src="{{ url($f->header->file_path) }}" class="img-fluid"
                                                 alt="{{ $f->name }}" width="200" style="max-width: 100%" />
                                         @endif
                                         @if ($f->header->file == 'video')

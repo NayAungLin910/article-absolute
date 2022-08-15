@@ -29,7 +29,7 @@
                                     <a href="{{ url('/article-view/' . $a->slug) }}">
                                         <div class="card" style="width: 21rem;">
                                             @if ($a->header->file == 'image')
-                                                <img src="{{ $a->header->file_path }}" class="card-img-top"
+                                                <img src="{{ url($a->header->file_path) }}" class="card-img-top"
                                                     alt="Sunset Over the Sea" />
                                             @endif
                                             @if ($a->header->file == 'video')
